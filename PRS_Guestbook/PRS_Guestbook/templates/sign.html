@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>PRS Hotel Gästebuch</title>
+
+    
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+
+    
+    <link href="{{ url_for('static', filename='css/sign.css') }}" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <form class="form-signin" method="post" action="/process">
+        <h2 class="form-signin-heading">Bitte verfassen Sie Ihren Eintrag hier</h2>
+        <div class="form-group">
+          <label for="inputName" class="sr-only">Tragen Sie Ihren Namen ein</label>
+          <input type="text" id="inputName" name="name" class="form-control" placeholder="Tragen Sie Ihren Namen ein" required autofocus>
+        </div>
+        <div class="form-group">
+          <label for="comment" class="sr-only">Ihr Kommentar für PRS Hotel:</label>
+            <textarea class="form-control" name="comment" rows="5" id="comment" placeholder="Ihr Kommentar für PRS Hotel" required></textarea>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Eintrag verfassen</button>
+      </form>
+
+    </div> 
+
+  </body>
+</html>
